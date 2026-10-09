@@ -1,4 +1,39 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const normalize = (text) => text.replace(/\s+/g, ' ').trim();
+  const translatedNodes = [];
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+  while (walker.nextNode()) {
+    const node = walker.currentNode;
+    if (node.parentElement.closest('script, style')) continue;
+    const english = window.ecoMindTranslations[normalize(node.textContent)];
+    if (english) translatedNodes.push({ node, spanish: node.textContent, english });
+  }
+  const translatedAttributes = [];
+  document.querySelectorAll('[alt], [aria-label]').forEach((element) => {
+    ['alt', 'aria-label'].forEach((attribute) => {
+      const spanish = element.getAttribute(attribute);
+      const english = window.ecoMindTranslations[spanish];
+      if (english) translatedAttributes.push({ element, attribute, spanish, english });
+    });
+  });
+  const languageSelect = document.getElementById('languageSelect');
+  function setLanguage(language) {
+    const selected = language === 'en' ? 'en' : 'es';
+    document.documentElement.lang = selected;
+    languageSelect.value = selected;
+    translatedNodes.forEach(({ node, spanish, english }) => {
+      node.textContent = selected === 'en' ? spanish.replace(/\S[\s\S]*\S|\S/, english) : spanish;
+    });
+    translatedAttributes.forEach(({ element, attribute, spanish, english }) => {
+      element.setAttribute(attribute, selected === 'en' ? english : spanish);
+    });
+    try { localStorage.setItem('ecomind-language', selected); } catch {}
+  }
+  languageSelect.addEventListener('change', () => setLanguage(languageSelect.value));
+  let savedLanguage = 'es';
+  try { savedLanguage = localStorage.getItem('ecomind-language') || 'es'; } catch {}
+  setLanguage(savedLanguage);
+
   const mainView = document.querySelector('main');
   const pageViews = {
     '#preguntas': document.getElementById('faq-page'),
@@ -52,6 +87,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('popstate', () => showView(window.location.hash));
   showView(window.location.hash);
+
+  document.querySelector('.btn-primario')?.addEventListener('click', () => {
+    document.getElementById('beneficios')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
 
   const communitySlides = [
     document.getElementById('slide1'),
