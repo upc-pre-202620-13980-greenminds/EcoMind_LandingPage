@@ -1,6 +1,6 @@
 # EcoMind_LandingPage
 
-EcoMind’s landing page introduces several views that explain the content available on the platform. It aims to encourage people to take part in environmental action, starting with students and extending to entire communities.
+EcoMind’s landing page introduces several views that explain the content available on the application. It aims to encourage people to take part in environmental action, starting with students and extending to entire communities.
 
 - Views available:
   - Home
@@ -32,6 +32,6 @@ EcoMind’s landing page introduces several views that explain the content avail
 
 - Sections:
   - Home: Presents our message, a brief overview of the features, and who we are
-  - Frequently Asked Questions: Answers users’ most common questions about using the platform
-  - Parent Guide: Offers parents basic tips on using the platform to help their family get the most out of it
+  - Frequently Asked Questions: Answers users’ most common questions about using the application
+  - Parent Guide: Offers parents basic tips on using the application to help their family get the most out of it
   - Community: Showcases activities users can participate in with others, along with related statistics
