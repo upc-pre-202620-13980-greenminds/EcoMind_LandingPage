@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoMind</title>
+    <link rel="stylesheet" href="assets/styles/styles.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+
+  </head>
+
+  <body>
+    <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo" aria-label="EcoMind - inicio">
+        <img src="assets/images/ecomind_logo.png" alt="EcoMind"/>
+      </a>
+
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+      <div class="navbar-right">
+        <ul class="menu">
+            <li><a href="#preguntas">PREGUNTAS FRECUENTES</a></li>
+            <li><a href="#guia">GUÍA PARA PADRES</a></li>
+            <li><a href="#comunidad">COMUNIDAD</a></li>
+        </ul>
+        <label class="language-switch" aria-label="Cambiar idioma">
+          <span class="language-switch__label">Idioma</span>
+          <select id="languageSelect" class="language-switch__select">
+            <option value="es">ES</option>
+            <option value="en">EN</option>
+          </select>
+        </label>
+
+        <button type="button" class="btn-unete">
+          ÚNETE AHORA <span class="arrow"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+    <main>
+        <section class="hero">
+        <img src="assets/images/LandingPage/background.png" class="hero__img">
+
+        <div class="hero__glass">
+            <h1>Aprender a cuidar el planeta<br>empieza contigo</h1>
+            <button type="button" class="btn-primario">
+            Explorar retos
+            </button>
+        </div>
+
+        <div class="hero__wave" aria-hidden="true">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+            <path d="M0,80 C240,120 480,0 720,40 C960,80 1200,120 1440,60 L1440,120 L0,120 Z" fill="#ffffff"/>
+            </svg>
+        </div>
+        </section>
+
+        <section class="benefits" id="beneficios">
+            <div class="benefits__header">
+            <h2>¿Por qué usar <span class="brand-word">EcoMind</span>?</h2>
+            </div>
+
+            <div class="benefits__grid">
+                <div class="benefit">
+                    <img src="assets/images/LandingPage/btn_blue.png" alt="Aprende de forma divertida" class="benefit__img">
+                    <h3>Aprende de forma divertida</h3>
+                    <p>Convierte la educación ambiental en un juego interactivo lleno de retos y recompensas.</p>
+                </div>
+
+                <div class="benefit">
+                    <img src="assets/images/LandingPage/btn_yellow.png" alt="Obtén nuevas experiencias en familia" class="benefit__img">
+                    <h3>Obtén nuevas experiencias en familia</h3>
+                    <p>Disfruta actividades sostenibles junto a tus seres queridos y aprendan juntos a cuidar el planeta.</p>
+                </div>
+
+                <div class="benefit">
+                    <img src="assets/images/LandingPage/btn_green.png" alt="Forma parte de una comunidad verde" class="benefit__img">
+                    <h3>Forma parte de una comunidad verde</h3>
+                    <p>Conecta con otros usuarios comprometidos y comparte tus logros ecológicos.</p>
+                </div>
+
+                <div class="benefit">
+                    <img src="assets/images/LandingPage/btn_red.png" alt="Genera un impacto real" class="benefit__img">
+                    <h3>Genera un impacto real</h3>
+                    <p>Aplica los conocimientos adquiridos y contribuye a mejorar tu entorno desde acciones pequeñas.</p>
+                </div>
+            </div>
+        </section>
+        <section class="about" id="sobre-nosotros">
+            <h2>Sobre nosotros</h2>
+
+            <div class="about__grid">
+                
+                <article class="about-card">
+                    <img src="assets/images/LandingPage/mision.png" alt="Ícono de misión" class="about-card__icon">
+                    <h3>Misión</h3>
+                    <p>
+                        Promover la conciencia ambiental a través del aprendizaje digital, ayudando a construir un futuro
+                        más sostenible para todos.
+                    </p>
+                </article>
+
+                
+                <article class="about-card">
+                    <img src="assets/images/LandingPage/vision.png" alt="Ícono de visión" class="about-card__icon">
+                    <h3>Visión</h3>
+                    <p>
+                        Ser la principal plataforma educativa en sostenibilidad, donde cada reto contribuya a mejorar
+                        el planeta paso a paso.
+                    </p>
+                </article>
+
+                
+                <article class="about-card">
+                    <img src="assets/images/plant.png" alt="Ícono de quienes somos" class="about-card__icon">
+                    <h3>¿Quiénes somos?</h3>
+                    <p>
+                        Somos un grupo de jóvenes comprometidos con el cambio climático que combina tecnología y
+                        educación para inspirar acción verde.
+                    </p>
+                </article>
+            </div>
+        </section>
+    </main>
+    
+
+    
+
+    <div id="faq-page" class="page-section">
+        <div class="faq-container">
+            <h1 class="faq-title">Frequently Asked Questions</h1>
+            
+            <details class="faq-item">
+                <summary>¿Puedo usar la app sin conexión a internet?</summary>
+                <p>Sí, la aplicación está diseñada para funcionar en modo offline. Puedes completar retos y leer guías sin conexión. Tu progreso se sincronizará automáticamente la próxima vez que te conectes a internet.</p>
+            </details>
+            
+            <details class="faq-item">
+                <summary>¿Puedo eliminar mi cuenta?</summary>
+                <p>Sí, puedes eliminar tu cuenta en cualquier momento desde la sección de 'Ajustes' en tu perfil. Ten en cuenta que esta acción es irreversible y se borrarán todos tus datos y progreso.</p>
+            </details>
+            
+            <details class="faq-item">
+                <summary>¿Las actividades son gratuitas?</summary>
+                <p>¡Sí! Todas las actividades educativas, retos y funciones principales de EcoMind son completamente gratuitas. Nuestro objetivo es que el aprendizaje ambiental sea accesible para todos.</p>
+            </details>
+            
+            <details class="faq-item">
+                <summary>¿Puedo cambiar mi compromiso ambiental?</summary>
+                <p>Claro. Puedes editar o actualizar tus compromisos ambientales personales en cualquier momento desde tu perfil. ¡Lo importante es mantener la motivación!</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>¿Cómo puedo ganar mas puntos?</summary>
+                <p>Ganas puntos (EcoPoints) completando retos diarios, terminando actividades educativas (como lecturas o videos), participando en eventos de la comunidad y manteniendo rachas semanales.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>¿Cómo invito a mi familia?</summary>
+                <p>En tu perfil, encontrarás la sección "Mi Familia". Desde allí, puedes crear un grupo familiar y enviar invitaciones a tus padres o hijos usando sus correos electrónicos o nombres de usuario.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>¿Cómo funcionan los puntos y recompensas?</summary>
+                <p>Los puntos que ganas te ayudan a subir en el ranking y a desbloquear insignias especiales. Las recompensas son reconocimientos virtuales que celebran tus logros y tu constancia en el cuidado del planeta.</p>
+            </details>
+        </div>
+    </div>
+
+    <div id="parents-guide-page" class="page-section">
+        <section class="guide-hero">
+            <div class="guide-content-wrapper">
+                <div class="guide-text-content">
+                    <h1>Guía Para Padres</h1>
+                    <p>EcoMind facilita que las familias aprendan y crezcan juntas en temas de sostenibilidad. Nuestra plataforma está diseñada para que padres e hijos puedan participar de manera segura y educativa.</p>
+                    <p>Crea tu grupo familiar, establece objetivos compartidos y celebra los logros de cada miembro mientras aprenden sobre el cuidado del medio ambiente.</p>
+                    <ul>
+                        <li>Reportes de progreso detallados para toda la familia</li>
+                        <li>Comunicación segura dentro de la plataforma</li>
+                        <li>Retos familiares diseñados para todas las edades</li>
+                        <li>Contenido educativo verificado y apropiado</li>
+                    </ul>
+                </div>
+                <div class="guide-image-container">
+                    <img src="assets/images/parent-guide/familia.jpg" alt="Familia aprendiendo en tablet" class="guide-hero-image">
+                </div>
+            </div>
+        </section>
+
+        <section class="educational-resources">
+            <h2>Recursos Educativos</h2>
+            <p class="resources-subtitle">Todo lo que encontrarás para empezar tu viaje educativo ambiental</p>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <img src="assets/images/parent-guide/books.png" alt="Lecturas Icono" class="resource-icon">
+                    <h3>Lecturas</h3>
+                    <p>Contenido estructurado sobre reciclaje, ecología y biodiversidad</p>
+                </div>
+                <div class="resource-card">
+                    <img src="assets/images/parent-guide/video.png" alt="Videos Icono" class="resource-icon">
+                    <h3>Videos</h3>
+                    <p>Aprende con contenido audiovisual dinámico y fácil de seguir</p>
+                </div>
+                <div class="resource-card">
+                    <img src="assets/images/parent-guide/infografia.png" alt="Infografías Icono" class="resource-icon">
+                    <h3>Infografías</h3>
+                    <p>Visualiza información compleja de manera clara y atractiva</p>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <section class="parent-tips">
+            <h2>Consejos para Padres</h2>
+            <ul>
+                <li><strong>Predica con el ejemplo:</strong><span>Tus acciones son el mejor modelo de aprendizaje para tus hijos.</span></li>
+                <li><strong>Celebra los pequeños logros:</strong><span>Reconoce cada paso que dan hacia hábitos más sostenibles.</span></li>
+                <li><strong>Hazlo divertido:</strong><span>Transforma las actividades ambientales en juegos y experiencias positivas.</span></li>
+                <li><strong>Mantén la constancia:</strong><span>Los hábitos se forman con práctica diaria y paciencia.</span></li>
+                <li><strong>Fomenta la curiosidad:</strong><span>Responde sus preguntas y motívalos a explorar más sobre la naturaleza.</span></li>
+                <li><strong>Crea rutinas verdes:</strong><span>Incorpora prácticas sostenibles en la rutina diaria familiar.</span></li>
+            </ul>
+        </section>
+    </div>
+
+    <div id="comunidad-page" class="page-section">
+      <section class="hero-section">
+        <div class="hero-content">
+          <button type="button" class="btn-join-hero btn-unete">
+            ÚNETE A NOSOTROS <span class="arrow"></span>
+          </button>
+
+          <h2 class="community-title">Comunidad EcoMind</h2>
+
+          <p class="community-description">
+            Miles de familias aprendiendo juntas y creando un impacto real en el
+            cuidado del medio ambiente. Un espacio donde compartimos
+            experiencias, logros y construimos un futuro más verde.
+          </p>
+
+          <div class="stats-card">
+            <h3>Nuestra comunidad en números</h3>
+
+            <div class="stat-item">
+              <img
+                src="assets/images/LandingPage_comunidad/miembros.png"
+                alt="Icono Miembros Activos"
+                class="stat-icon-img"
+              />
+              <div>
+                <span class="stat-number">10,000+</span>
+                <span class="stat-label">Miembros activos</span>
+              </div>
+            </div>
+
+            <div class="stat-item">
+              <img
+                src="assets/images/LandingPage_comunidad/medalla.png"
+                alt="Icono Retos Completados"
+                class="stat-icon-img"
+              />
+              <div>
+                <span class="stat-number">5,000+</span>
+                <span class="stat-label">Retos completados</span>
+              </div>
+            </div>
+
+            <div class="stat-item">
+              <img
+                src="assets/images/LandingPage_comunidad/familias.png"
+                alt="Icono Familias Conectadas"
+                class="stat-icon-img"
+              />
+              <div>
+                <span class="stat-number">500+</span>
+                <span class="stat-label">Familias conectadas localmente</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="what-to-do-section">
+        <h2 class="section-title">¿Qué puedes hacer en la comunidad?</h2>
+        <p class="section-description">
+          Conecta, aprende y haz la diferencia junto a miles de familias
+        </p>
+
+        <div class="container" style="position: relative">
+          <div class="content-block" id="slide1">
+            <div class="text-content">
+              <h3 class="share-achievements-title">Comparte tus logros</h3>
+              <p class="share-achievements-description">
+                Celebra logros con otras familias comprometidas
+              </p>
+            </div>
+            <div class="image-content">
+              <img
+                src="assets/images/LandingPage_comunidad/comunidad.png"
+                alt="Gente de la comunidad EcoMind"
+                class="comunidad-img"
+              />
+            </div>
+          </div>
+          <div class="content-block" id="slide2" style="display: none">
+            <div class="slide-item">
+              <img
+                src="assets/images/LandingPage_comunidad/ambiente.png"
+                alt="Participa en retos"
+              />
+              <h4 class="slide-item-title">Participa en retos</h4>
+              <p class="slide-item-description">
+                Involúcrate en desafíos relacionados con el medio ambiente y
+                compite de forma amistosa
+              </p>
+            </div>
+            <div class="slide-item">
+              <img
+                src="assets/images/LandingPage_comunidad/aprende_comunidad.png"
+                alt="Aprende en comunidad"
+              />
+              <h4 class="slide-item-title">Aprende en comunidad</h4>
+              <p class="slide-item-description">
+                Conecta con personas de todo el mundo que comparten la pasión por
+                el planeta.
+              </p>
+            </div>
+          </div>
+
+          <button
+            class="slider-arrow right-arrow"
+            id="nextSlide"
+            aria-label="Siguiente diapositiva"
+          >
+            &rsaquo;
+          </button>
+          <button id="prevSlide" class="slider-arrow left-arrow" aria-label="Anterior" style="display:none;">&lsaquo;</button>
+          
+          </div>
+      </section>
+
+      
+
+      <section class="testimonials-section">
+        <div class="container">
+          <h2 class="section-title">Lo que dicen nuestras familias</h2>
+
+          <div class="testimonials-grid">
+            <div class="testimonial-card">
+              <p class="testimonial-text">
+                "EcoMind ha transformado la manera en que mi familia se relaciona
+                con el medio ambiente. Mis hijos están súper motivados y ahora
+                todos participamos en los retos juntos."
+              </p>
+              <div class="author-info">
+                <div class="author-initial initial-m">M</div>
+                <div>
+                  <span class="author-name">María Gonzales</span>
+                  <span class="author-details">Madre de 2 niños - Lima</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <p class="testimonial-text">
+                "EcoMind ha transformado la manera en que mi familia se relaciona
+                con el medio ambiente. Mis hijos están súper motivados y ahora
+                todos participamos en los retos juntos."
+              </p>
+              <div class="author-info">
+                <div class="author-initial initial-c">C</div>
+                <div>
+                  <span class="author-name">Carlos Ramírez</span>
+                  <span class="author-details">Profesor - Callao</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <p class="testimonial-text">
+                "La comunidad es increíble. He aprendido tanto de otras familias
+                y mis hijos han hecho amigos que comparten su amor por el
+                planeta. ¡Totalmente recomendado!"
+              </p>
+              <div class="author-info">
+                <div class="author-initial initial-a">A</div>
+                <div>
+                  <span class="author-name">Ana Torres</span>
+                  <span class="author-details">Madre de 3 niños - Lima</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="community-events-section" aria-labelledby="community-events-title">
+        <div class="community-events-shell">
+          <div class="community-events-copy">
+            <span class="community-events-kicker">Eventos cercanos</span>
+            <h2 id="community-events-title" class="community-events-title">
+              Entérate de los encuentros ecológicos más cerca de ti
+            </h2>
+            <p class="community-events-description">
+              Descubre actividades organizadas por la comunidad EcoMind, participa
+              con tu familia y conecta con otros Ecominders que también quieren
+              generar un impacto real.
+            </p>
+            <div class="community-events-highlights">
+              <div class="community-events-pill">Actividades familiares</div>
+              <div class="community-events-pill">Voluntariado local</div>
+              <div class="community-events-pill">Retos con recompensa</div>
+            </div>
+          </div>
+
+          
+          <article class="community-events-card">
+            <div class="community-events-media">
+              <img
+                src="assets/images/LandingPage_comunidad/eventos.png"
+                alt="Vista previa de eventos de la comunidad EcoMind"
+                class="community-events-image"
+              />
+              <div class="community-events-badge">3 eventos esta semana</div>
+            </div>
+
+            <div class="community-events-list-wrap">
+              <h3 class="community-events-list-title">Próximas actividades</h3>
+
+              <ul class="community-events-list">
+                <li class="community-events-item">
+                  <div>
+                    <p class="community-events-item-title">Limpieza de río</p>
+                    <p class="community-events-item-meta">15 nov • 10:00 AM • Lima</p>
+                  </div>
+                  <span class="community-events-tag">Comunidad</span>
+                </li>
+
+                <li class="community-events-item">
+                  <div>
+                    <p class="community-events-item-title">Plantación urbana</p>
+                    <p class="community-events-item-meta">18 nov • 9:00 AM • San Miguel</p>
+                  </div>
+                  <span class="community-events-tag">Familias</span>
+                </li>
+
+                <li class="community-events-item">
+                  <div>
+                    <p class="community-events-item-title">Taller de reciclaje</p>
+                    <p class="community-events-item-meta">20 nov • 4:00 PM • Miraflores</p>
+                  </div>
+                  <span class="community-events-tag">Taller</span>
+                </ul>
+              </li>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    
+    <footer class="footer">
+        <div class="footer__inner">
+            <nav class="footer__links" aria-label="Enlaces de pie de página">
+            <a href="#">Nosotros</a>
+            <a href="#">Blog</a>
+            <a href="#">Tienda</a>
+            <a href="#">Términos</a>
+            <a href="#">Privacidad</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="assets/scripts/main.js"></script>
+  </body>
+</html>
