@@ -114,4 +114,42 @@ document.addEventListener('DOMContentLoaded', () => {
   nextSlide?.addEventListener('click', () => showCommunitySlide(activeSlide + 1));
   previousSlide?.addEventListener('click', () => showCommunitySlide(activeSlide - 1));
   showCommunitySlide(0);
+
+  const productVideoSlides = Array.from(document.querySelectorAll('.product-video__slide'));
+  const productVideoDots = Array.from(document.querySelectorAll('.product-video__dot'));
+  const productVideoTitle = document.getElementById('productVideoTitle');
+  const previousProductVideo = document.getElementById('previousProductVideo');
+  const nextProductVideo = document.getElementById('nextProductVideo');
+  let activeProductVideo = 0;
+
+  function showProductVideo(index) {
+    if (!productVideoSlides.length) return;
+
+    activeProductVideo = (index + productVideoSlides.length) % productVideoSlides.length;
+    productVideoSlides.forEach((slide, slideIndex) => {
+      const isActive = slideIndex === activeProductVideo;
+      slide.classList.toggle('is-active', isActive);
+      slide.setAttribute('aria-hidden', String(!isActive));
+    });
+
+    productVideoDots.forEach((dot, dotIndex) => {
+      const isActive = dotIndex === activeProductVideo;
+      dot.classList.toggle('is-active', isActive);
+      dot.setAttribute('aria-current', String(isActive));
+    });
+
+    if (productVideoTitle) {
+      const spanishTitle = productVideoSlides[activeProductVideo].dataset.title;
+      productVideoTitle.textContent = document.documentElement.lang === 'en'
+        ? window.ecoMindTranslations[spanishTitle]
+        : spanishTitle;
+    }
+  }
+
+  previousProductVideo?.addEventListener('click', () => showProductVideo(activeProductVideo - 1));
+  nextProductVideo?.addEventListener('click', () => showProductVideo(activeProductVideo + 1));
+  productVideoDots.forEach((dot) => {
+    dot.addEventListener('click', () => showProductVideo(Number(dot.dataset.videoIndex)));
+  });
+  showProductVideo(0);
 });

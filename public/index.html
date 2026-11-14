@@ -95,6 +95,78 @@
                 </div>
             </div>
         </section>
+
+        <section class="product-video" id="videos" aria-labelledby="productVideoTitle">
+            <div class="product-video__inner">
+                <h2 id="productVideoTitle">Sobre el producto</h2>
+
+                <div class="product-video__carousel">
+                    <button
+                        type="button"
+                        class="product-video__arrow product-video__arrow--prev"
+                        id="previousProductVideo"
+                        aria-label="Ver video anterior">
+                        &#8249;
+                    </button>
+
+                    <div class="product-video__frame">
+                        <div
+                            class="product-video__slide is-active"
+                            data-title="Sobre el producto"
+                            aria-hidden="false">
+                            <iframe
+                                src="https://www.youtube.com/embed/ncnP-2C8w-0"
+                                title="Video About the Product de EcoMind"
+                                loading="lazy"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+
+                        <div
+                            class="product-video__slide"
+                            data-title="Sobre el equipo"
+                            aria-hidden="true">
+                            <iframe
+                                src="https://www.youtube.com/embed/CCD8kZNfLDo"
+                                title="Video About the Team de GreenMinds"
+                                loading="lazy"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <button
+                        type="button"
+                        class="product-video__arrow product-video__arrow--next"
+                        id="nextProductVideo"
+                        aria-label="Ver video siguiente">
+                        &#8250;
+                    </button>
+                </div>
+
+                <div class="product-video__dots" aria-label="Seleccionar video">
+                    <button
+                        type="button"
+                        class="product-video__dot is-active"
+                        data-video-index="0"
+                        aria-label="Ver video sobre el producto"
+                        aria-current="true">
+                    </button>
+                    <button
+                        type="button"
+                        class="product-video__dot"
+                        data-video-index="1"
+                        aria-label="Ver video sobre el equipo"
+                        aria-current="false">
+                    </button>
+                </div>
+            </div>
+        </section>
+
         <section class="about" id="sobre-nosotros">
             <h2>Sobre nosotros</h2>
 
